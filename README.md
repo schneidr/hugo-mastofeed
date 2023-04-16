@@ -26,3 +26,8 @@ Add to your Hugo `config.toml`:
         mediaType = 'application/rss+xml'
 
 After building the site the feed will be available under `https://example.org/mastofeed.xml`.
+
+The feed accepts two new fields in the frontmatter of posts and pages:
+
+- `mastotext`: Used as description if available, fallback to the `description` field
+- `mastotags`: is added as separate tags to the items, is used by feediverse to generate hashtags
