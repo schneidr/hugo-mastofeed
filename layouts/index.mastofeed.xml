@@ -22,12 +22,8 @@
       {{- with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>{{ if .Params.mastotext }}{{ .Params.mastotext }}{{ else }}{{ .Description }}{{ end }}</description>
-      {{- if .Params.mastotags }}
-      <tags>
       {{- range .Params.mastotags }}
-        <tag>{{ . }}</tag>
-      {{- end }}
-      </tags>
+      <tags>{{ . }}</tags>
       {{- end }}
     </item>
     {{ end }}
